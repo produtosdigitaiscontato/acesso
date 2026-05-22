@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacote Básico - Acesso</title>
+  <link rel="shortcut icon" href="Foto perfil contato produtos.svg" type="image/x-icon">
+
+  <!-- Meta Pixel Base Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2446062762512167');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Evento Purchase com proteção contra duplicado -->
+  <script>
+    if (!localStorage.getItem('purchaseFired')) {
+      fbq('track', 'Purchase', {
+        value: 9.90,
+        currency: 'BRL'
+      });
+      localStorage.setItem('purchaseFired', 'true');
+    }
+  </script>
+
+  <!-- Fallback para navegadores sem JavaScript -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2446062762512167&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fffbe6, #ffe5ec);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      color: #ff6f61;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .button {
+      padding: 1rem 1.5rem;
+      background-color: #6a5acd;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #483d8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Acesso Liberado!</h1>
+    <p>Obrigado pela sua compra!</p>
+    <p>Segue abaixo o acesso do conteúdo:</p>
+    <div class="buttons">
+      <a href="https://drive.google.com/drive/folders/1HLSaoGikkOmr-SRWIgUsoCk_cbNXSVg0?usp=sharing" class="button" target="_blank">📚 Acessar o Material</a>
+      
+    </div>
+  </div>
+</body>
+</html>
